@@ -7,7 +7,7 @@ import { useLoadedAssets } from "./hooks/useLoadedAssets";
 import { useLoadedTheme } from "./hooks/useLoadedTheme";
 import Navigation from "./navigation";
 
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components/native";
 import React from 'react';
 
 
@@ -19,12 +19,12 @@ export default function App() {
     return null;
   } else {
     return (
-      <ThemeProvider theme={theme}>
-        <SafeAreaProvider>
+      <SafeAreaProvider>
+        <ThemeProvider theme={theme}>
           <Navigation />
           <StatusBar />
-        </SafeAreaProvider>
-      </ThemeProvider>
+        </ThemeProvider>
+      </SafeAreaProvider>
     );
   }
 }

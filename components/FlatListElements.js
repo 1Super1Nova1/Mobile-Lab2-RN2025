@@ -11,14 +11,14 @@ import {
 
 export const DATA = [];
 
-for (let i = 1; i <= 25; i++) {
-    DATA.push(randomElement(i-1));
+for (let i = 0; i < 25; i++) {
+    DATA.push(randomElement(i));
 }
 
 export const loadMoreElements = () => {
     if (true) {
         let flag = DATA.length
-        for (let i = flag + 1; i <= flag + 10; i++) {
+        for (let i = flag; i < flag + 10; i++) {
             DATA.push(randomElement(i));
         }
     }

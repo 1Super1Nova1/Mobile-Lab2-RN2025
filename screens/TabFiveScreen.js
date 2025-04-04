@@ -16,8 +16,7 @@ export default function TabFiveScreen() {
     await AsyncStorage.setItem("theme", newTheme === Colors.dark ? "dark" : "light");
   };
 
-  return (
-    // <ThemeProvider theme={theme}>
+  return ( 
     <View style={styles.container} >
       <StatusBar barStyle={theme === Colors.light ? "light-content" : "dark-content"} />
       <Text>
@@ -30,8 +29,7 @@ export default function TabFiveScreen() {
         title="press"
         onPress={toggleTheme}>
       </Button>
-    </View>
-    // </ThemeProvider>
+    </View> 
   );
 }
 
